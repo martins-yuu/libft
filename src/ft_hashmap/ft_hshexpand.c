@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:24:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/02 19:31:06 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/17 23:44:51 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,9 @@ t_hashmap	*ft_hshexpand(t_hashmap *hsh, size_t size)
 	size_t			index;
 
 	tmp = ft_arrnew(sizeof(struct s_entry));
-	if (!tmp)
-		return (NULL);
-	if (!ft_arrexpand(tmp, size))
+	if (!tmp || !ft_arrexpand(tmp, size))
 		return (ft_arrfree(tmp), NULL);
+	hsh->size = 0;
 	i = 0;
 	while (i < hsh->entries->capacity)
 	{
@@ -43,6 +42,7 @@ t_hashmap	*ft_hshexpand(t_hashmap *hsh, size_t size)
 		{
 			index = hsh->hash(entry->key) % tmp->capacity;
 			set_entry(tmp, entry, index);
+			hsh->size++;
 		}
 		i++;
 	}

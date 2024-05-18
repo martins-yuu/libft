@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:50:41 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/28 10:05:06 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/18 19:14:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,12 @@
  */
 void	*ft_hshget(const t_hashmap *hsh, const char *key)
 {
-	return (ft_hshfind(hsh, key)->value);
+	struct s_entry	*entry;
+
+	if (hsh->size == 0)
+		return (NULL);
+	entry = ft_hshfind(hsh, key);
+	if (entry->key == NULL)
+		return (NULL);
+	return (entry->value);
 }
