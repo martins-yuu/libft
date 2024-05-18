@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 01:07:03 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 01:09:53 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/17 23:39:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
  */
 void	ft_stkfree(t_stack *stk, void (*del)(void *))
 {
+	if (!stk)
+		return ;
 	ft_lstclear(&stk->top, del);
 	free(stk);
 }
