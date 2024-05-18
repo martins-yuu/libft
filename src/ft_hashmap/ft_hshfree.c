@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:29:49 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/17 03:31:35 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/17 23:37:49 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
  */
 void	ft_hshfree(t_hashmap *hsh)
 {
+	if (!hsh)
+		return ;
 	ft_arrfree(hsh->entries);
 	free(hsh);
 }

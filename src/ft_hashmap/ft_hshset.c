@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:50:51 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/28 11:21:11 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/17 23:31:48 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_hshset(t_hashmap *hsh, const char *key, void *value)
 		&& !ft_hshexpand(hsh, hsh->entries->capacity * ARRAY_GROWTH_FACTOR))
 		return (NULL);
 	entry = ft_hshfind(hsh, key);
-	if (entry->key == NULL)
+	if (entry->key == NULL && entry->value == NULL)
 		hsh->size++;
 	entry->key = key;
 	entry->value = value;

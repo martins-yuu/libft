@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/05/03 18:20:35 by yuuko            ###   ########.fr        #
+#    Updated: 2024/05/18 21:51:12 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -162,6 +162,7 @@ SRCS		:=	\
 	ft_hashmap/ft_hshget.c \
 	ft_hashmap/ft_hshset.c \
 	ft_hashmap/ft_hshdel.c \
+	ft_hashmap/ft_hshdel2.c \
 	ft_hashmap/ft_hshbegin.c \
 	ft_hashmap/ft_hshnext.c \
 	ft_hashmap/ft_hsheach.c \
