@@ -6,12 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 20:48:04 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/29 17:10:48 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 23:14:14 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
 #include "ft_string.h"
+#include <stdbool.h>
 #include <stdlib.h>
 
 static size_t	count_words(char const *s, char c);
@@ -52,20 +53,20 @@ static size_t	count_words(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
-	_Bool	new_word;
+	bool	new_word;
 
 	count = 0;
 	i = 0;
-	new_word = 0;
+	new_word = false;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c && !new_word)
 		{
 			count++;
-			new_word = 1;
+			new_word = true;
 		}
 		else if (s[i] == c)
-			new_word = 0;
+			new_word = false;
 		i++;
 	}
 	return (count);

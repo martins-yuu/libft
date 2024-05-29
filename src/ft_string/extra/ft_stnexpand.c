@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 06:11:45 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/29 09:16:42 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 21:56:42 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
-#include "ft_string.h"
+#include "ft_string_int.h"
 #include <stdlib.h>
 
 /**
@@ -32,7 +32,7 @@ t_string	ft_stnexpand(t_string s, size_t size)
 	if (ft_stncap(s) - len >= size)
 		return (s);
 	newsize = (len + size) * 2;
-	ptr = (struct s_string_header *)(s - header_size);
+	ptr = ft_stnhdr(s);
 	ptr = ft_mexpand(ptr, header_size + newsize + 1, header_size + len + 1);
 	if (!ptr)
 		return (NULL);

@@ -6,11 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:51:27 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/02 19:32:07 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 23:11:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_hashmap.h"
+#include "ft_hashmap_int.h"
+#include <stdbool.h>
 #include <stdlib.h>
 
 /**
@@ -19,14 +20,14 @@
  * @param it The iterator to advance.
  * @return A nonzero value if the iterator was advanced, zero otherwise.
  */
-_Bool	ft_hshnext(t_hsh_iterator *it)
+bool	ft_hshnext(t_hashmap_iterator *it)
 {
 	const t_hashmap	*hsh;
 	size_t			i;
 	struct s_entry	*entry;
 
 	hsh = it->_hsh;
-	while (it->_index < hsh->entries->capacity)
+	while (it->_index < ft_arrcap(hsh->entries))
 	{
 		i = it->_index;
 		it->_index++;
@@ -35,8 +36,8 @@ _Bool	ft_hshnext(t_hsh_iterator *it)
 		{
 			it->key = entry->key;
 			it->value = entry->value;
-			return (1);
+			return (true);
 		}
 	}
-	return (0);
+	return (false);
 }

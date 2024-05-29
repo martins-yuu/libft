@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stkisempty.c                                    :+:      :+:    :+:   */
+/*   ft_string_int.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 02:18:44 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:12:44 by yuuko            ###   ########.fr       */
+/*   Created: 2024/05/28 21:30:23 by yuuko             #+#    #+#             */
+/*   Updated: 2024/05/28 21:38:53 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stack_int.h"
-#include <stdbool.h>
+#ifndef FT_STRING_INT_H
+# define FT_STRING_INT_H
 
-/**
- * @brief Checks if the given stack is empty.
- *
- * @param stk A pointer to the stack to check.
- * @return A nonzero value if the stack is empty, zero otherwise.
- */
-bool	ft_stkisempty(const t_stack *stk)
+# include "ft_string.h"
+# include <stdlib.h>
+
+struct					s_string_header
 {
-	return (stk->size == 0);
-}
+	size_t				size;
+	size_t				capacity;
+	char				buffer[];
+};
+
+struct s_string_header	*ft_stnhdr(const t_string s);
+void					ft_stnsetlen(t_string s, size_t newsize);
+void					ft_stnsetcap(t_string s, size_t newsize);
+
+#endif

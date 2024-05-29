@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 13:54:00 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/17 23:28:05 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 22:17:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_hashmap.h"
+#include "ft_hashmap_int.h"
 #include "ft_string.h"
 #include <stdlib.h>
 
@@ -28,7 +28,7 @@ struct s_entry	*ft_hshfind(const t_hashmap *hsh, const char *key)
 	size_t			index;
 
 	deleted = NULL;
-	index = hsh->hash(key) % hsh->entries->capacity;
+	index = hsh->hash(key) % ft_arrcap(hsh->entries);
 	while (1)
 	{
 		entry = ft_arrat(hsh->entries, index);
@@ -43,6 +43,6 @@ struct s_entry	*ft_hshfind(const t_hashmap *hsh, const char *key)
 		else if (entry->key != NULL && ft_strncmp(key, entry->key,
 				ft_strlen(entry->key) + 1) == 0)
 			return (entry);
-		index = (index + 1) % hsh->entries->capacity;
+		index = (index + 1) % ft_arrcap(hsh->entries);
 	}
 }

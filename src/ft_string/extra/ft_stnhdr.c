@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stkisempty.c                                    :+:      :+:    :+:   */
+/*   ft_stnhdr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 02:18:44 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:12:44 by yuuko            ###   ########.fr       */
+/*   Created: 2024/05/28 21:37:35 by yuuko             #+#    #+#             */
+/*   Updated: 2024/05/28 22:05:10 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stack_int.h"
-#include <stdbool.h>
+#include "ft_string_int.h"
 
 /**
- * @brief Checks if the given stack is empty.
+ * @brief Returns the header of the binary-safe string `s`.
  *
- * @param stk A pointer to the stack to check.
- * @return A nonzero value if the stack is empty, zero otherwise.
+ * @param s The string to be checked.
+ * @return The header of the string.
  */
-bool	ft_stkisempty(const t_stack *stk)
+struct s_string_header	*ft_stnhdr(const t_string s)
 {
-	return (stk->size == 0);
+	return ((struct s_string_header *)(s - sizeof(struct s_string_header)));
 }

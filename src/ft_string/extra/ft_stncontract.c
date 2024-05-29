@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 18:56:03 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/29 09:16:02 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 21:53:47 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
-#include "ft_string.h"
+#include "ft_string_int.h"
 #include <stdlib.h>
 
 /**
@@ -29,7 +29,7 @@ t_string	ft_stncontract(t_string s)
 	len = ft_stnlen(s);
 	if (ft_stncap(s) - len == 0)
 		return (s);
-	ptr = (struct s_string_header *)(s - header_size);
+	ptr = ft_stnhdr(s);
 	ptr = ft_mexpand(ptr, header_size + len + 1, header_size + len + 1);
 	if (!ptr)
 		return (NULL);

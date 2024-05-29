@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stkisempty.c                                    :+:      :+:    :+:   */
+/*   ft_arraylist_int.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 02:18:44 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:12:44 by yuuko            ###   ########.fr       */
+/*   Created: 2024/02/29 23:07:28 by yuuko             #+#    #+#             */
+/*   Updated: 2024/05/28 22:09:46 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stack_int.h"
-#include <stdbool.h>
+#ifndef FT_ARRAYLIST_INT_H
+# define FT_ARRAYLIST_INT_H
 
-/**
- * @brief Checks if the given stack is empty.
- *
- * @param stk A pointer to the stack to check.
- * @return A nonzero value if the stack is empty, zero otherwise.
- */
-bool	ft_stkisempty(const t_stack *stk)
+# include "ft_arraylist.h"
+
+# define ARRAY_DEFAULT_CAPACITY 16
+# define ARRAY_GROWTH_FACTOR 2
+
+struct		s_array
 {
-	return (stk->size == 0);
-}
+	void	*elements;
+	size_t	element_size;
+	size_t	size;
+	size_t	capacity;
+};
+
+t_array		*ft_arrexpand(t_array *arr, size_t size);
+
+#endif
