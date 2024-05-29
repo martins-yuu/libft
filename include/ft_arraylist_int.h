@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:07:28 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:09:46 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/02 14:23:08 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ struct		s_array
 };
 
 t_array		*ft_arrexpand(t_array *arr, size_t size);
+size_t		ft_arrcap(const t_array *arr);
 
 #endif

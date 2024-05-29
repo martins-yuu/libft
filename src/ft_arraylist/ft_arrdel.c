@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arrdelat.c                                      :+:      :+:    :+:   */
+/*   ft_arrdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 05:10:37 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 20:56:43 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/02 14:20:41 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @param arr A pointer to the array to delete the element from.
  * @param index The position of the element to be deleted from the array.
  */
-void	ft_arrdelat(t_array *arr, size_t index)
+void	ft_arrdel(t_array *arr, size_t index)
 {
 	char	*element;
 

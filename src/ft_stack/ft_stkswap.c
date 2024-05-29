@@ -6,11 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 02:43:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:36:22 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/29 00:00:10 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stack_int.h"
+#include <stdbool.h>
 #include <stdlib.h>
 
 /**
@@ -18,21 +19,20 @@
  * there is only one or no elements.
  *
  * @param stk A pointer to the stack to swap the elements in.
- * @return The content of the first element of the stack. The stack itself if
- * there is only one or no elements. NULL if an error occured.
+ * @return `true` if the swap was successful. `false` otherwise.
  */
-void	*ft_stkswap(t_stack *stk)
+bool	ft_stkswap(t_stack *stk)
 {
 	void	*first;
 	void	*second;
 
 	if (ft_stksize(stk) < 2)
-		return (stk);
+		return (true);
 	first = ft_stkpop(stk);
 	second = ft_stkpop(stk);
 	if (!ft_stkpush(stk, first))
-		return (NULL);
+		return (false);
 	if (!ft_stkpush(stk, second))
-		return (NULL);
-	return (first);
+		return (false);
+	return (true);
 }
