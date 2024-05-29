@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:31:41 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/29 00:08:56 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void					ft_stkfree(t_stack *stk, void (*del)(void *));
 size_t					ft_stksize(const t_stack *stk);
 bool					ft_stkisempty(const t_stack *stk);
 void					*ft_stkpeek(const t_stack *stk);
-t_stack					*ft_stkpush(t_stack *stk, void *content);
+bool					ft_stkpush(t_stack *stk, void *content);
 void					*ft_stkpop(t_stack *stk);
-void					*ft_stkswap(t_stack *stk);
-void					*ft_stkrotate(t_stack *stk);
-void					*ft_stkrrotate(t_stack *stk);
+bool					ft_stkswap(t_stack *stk);
+bool					ft_stkrotate(t_stack *stk);
+bool					ft_stkrrotate(t_stack *stk);
 
 #endif

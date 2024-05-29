@@ -6,12 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 02:44:32 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:36:05 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/29 00:05:56 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linkedlist.h"
 #include "ft_stack_int.h"
+#include <stdbool.h>
 #include <stdlib.h>
 
 /**
@@ -19,15 +20,12 @@
  *
  * @param stk A pointer to the stack to push to.
  * @param content The element to push.
- * @return The stack after the push. NULL if an error occured.
+ * @return `true` if the push was successful. `false` otherwise.
  */
-t_stack	*ft_stkpush(t_stack *stk, void *content)
+bool	ft_stkpush(t_stack *stk, void *content)
 {
-	t_list	*new;
-
-	new = ft_lstaddcontent_front(&stk->top, content);
-	if (!new)
-		return (NULL);
+	if (!ft_lstaddcontent_front(&stk->top, content))
+		return (false);
 	stk->size++;
-	return (stk);
+	return (true);
 }
