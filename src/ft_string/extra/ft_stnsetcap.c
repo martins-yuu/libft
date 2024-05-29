@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 03:05:54 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/29 09:16:02 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 22:02:37 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string.h"
+#include "ft_string_int.h"
 #include <stdlib.h>
 
 /**
@@ -21,9 +21,5 @@
  */
 void	ft_stnsetcap(t_string s, size_t newsize)
 {
-	static const size_t		header_size = sizeof(struct s_string_header);
-	struct s_string_header	*ptr;
-
-	ptr = (struct s_string_header *)(s - header_size);
-	ptr->capacity = newsize;
+	ft_stnhdr(s)->capacity = newsize;
 }

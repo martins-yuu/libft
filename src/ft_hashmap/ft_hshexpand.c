@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:24:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/17 23:44:51 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 22:17:21 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_arraylist.h"
-#include "ft_hashmap.h"
+#include "ft_arraylist_int.h"
+#include "ft_hashmap_int.h"
 #include <stdlib.h>
 
 static void	set_entry(t_array *entries, struct s_entry *entry, size_t index);
@@ -35,12 +35,12 @@ t_hashmap	*ft_hshexpand(t_hashmap *hsh, size_t size)
 		return (ft_arrfree(tmp), NULL);
 	hsh->size = 0;
 	i = 0;
-	while (i < hsh->entries->capacity)
+	while (i < ft_arrcap(hsh->entries))
 	{
 		entry = ft_arrat(hsh->entries, i);
 		if (entry->key != NULL)
 		{
-			index = hsh->hash(entry->key) % tmp->capacity;
+			index = hsh->hash(entry->key) % ft_arrcap(tmp);
 			set_entry(tmp, entry, index);
 			hsh->size++;
 		}
@@ -61,5 +61,5 @@ static void	set_entry(t_array *entries, struct s_entry *entry, size_t index)
 		ft_arrinsert(entries, entry, index);
 		return ;
 	}
-	set_entry(entries, entry, (index + 1) % entries->capacity);
+	set_entry(entries, entry, (index + 1) % ft_arrcap(entries));
 }

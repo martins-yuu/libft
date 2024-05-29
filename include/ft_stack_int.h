@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stkisempty.c                                    :+:      :+:    :+:   */
+/*   ft_stack_int.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 02:18:44 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:12:44 by yuuko            ###   ########.fr       */
+/*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
+/*   Updated: 2024/05/28 22:31:07 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stack_int.h"
-#include <stdbool.h>
+#ifndef FT_STACK_INT_H
+# define FT_STACK_INT_H
 
-/**
- * @brief Checks if the given stack is empty.
- *
- * @param stk A pointer to the stack to check.
- * @return A nonzero value if the stack is empty, zero otherwise.
- */
-bool	ft_stkisempty(const t_stack *stk)
+# include "ft_linkedlist.h"
+# include "ft_stack.h"
+# include <stdlib.h>
+
+struct		s_stack
 {
-	return (stk->size == 0);
-}
+	t_list	*top;
+	size_t	size;
+};
+
+#endif

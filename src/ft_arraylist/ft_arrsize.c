@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 05:09:50 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/17 03:41:48 by yuuko            ###   ########.fr       */
+/*   Created: 2024/05/28 21:10:07 by yuuko             #+#    #+#             */
+/*   Updated: 2024/05/28 21:10:08 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_arraylist.h"
+#include "ft_arraylist_int.h"
 #include <stdlib.h>
 
 /**

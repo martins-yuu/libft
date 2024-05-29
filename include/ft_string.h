@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/04 14:40:00 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 21:31:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,6 @@
 # include <unistd.h>
 
 typedef char	*t_string;
-
-struct			s_string_header
-{
-	size_t		size;
-	size_t		capacity;
-	char		buffer[];
-};
 
 size_t			ft_strlen(const char *s);
 void			*ft_memset(void *s, int c, size_t n);
@@ -62,8 +55,6 @@ t_string		ft_stntrim(t_string s1, const char *set);
 t_string		ft_stnrange(t_string s, ssize_t start, ssize_t end);
 t_string		ft_stntoupper(t_string s);
 t_string		ft_stntolower(t_string s);
-void			ft_stnsetlen(t_string s, size_t newsize);
-void			ft_stnsetcap(t_string s, size_t newsize);
 t_string		ft_stnexpand(t_string s, size_t size);
 t_string		ft_stncontract(t_string s);
 

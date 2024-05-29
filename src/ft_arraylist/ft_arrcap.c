@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stkisempty.c                                    :+:      :+:    :+:   */
+/*   ft_arrcap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 02:18:44 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:12:44 by yuuko            ###   ########.fr       */
+/*   Created: 2024/03/01 05:09:50 by yuuko             #+#    #+#             */
+/*   Updated: 2024/05/28 21:11:28 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stack_int.h"
-#include <stdbool.h>
+#include "ft_arraylist_int.h"
+#include <stdlib.h>
 
 /**
- * @brief Checks if the given stack is empty.
+ * @brief Returns the number of elements the array can hold.
  *
- * @param stk A pointer to the stack to check.
- * @return A nonzero value if the stack is empty, zero otherwise.
+ * @param arr A pointer to the array to be checked.
+ * @return The capacity of the array.
  */
-bool	ft_stkisempty(const t_stack *stk)
+size_t	ft_arrcap(const t_array *arr)
 {
-	return (stk->size == 0);
+	return (arr->capacity);
 }

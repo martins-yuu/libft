@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 02:44:37 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/17 03:37:36 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 22:35:56 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stack.h"
+#include "ft_stack_int.h"
 #include <stdlib.h>
 
 /**

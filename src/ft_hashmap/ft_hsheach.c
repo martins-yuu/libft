@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:56:25 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/30 13:18:00 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 23:11:02 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_hashmap.h"
+#include "ft_hashmap_int.h"
 #include <stdlib.h>
 
 /**
@@ -22,7 +22,7 @@
  */
 void	ft_hsheach(t_hashmap *hsh, void (*f)(const char *key, void *value))
 {
-	t_hsh_iterator	it;
+	t_hashmap_iterator	it;
 
 	it = ft_hshbegin(hsh);
 	while (ft_hshnext(&it))

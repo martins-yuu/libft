@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 01:07:03 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/17 23:39:32 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/05/28 22:35:37 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linkedlist.h"
-#include "ft_stack.h"
+#include "ft_stack_int.h"
 #include <stdlib.h>
 
 /**

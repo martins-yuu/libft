@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/05/18 21:51:12 by yuuko            ###   ########.fr        #
+#    Updated: 2024/05/28 21:59:55 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,10 +95,11 @@ SRCS		:=	\
 	ft_string/extra/ft_stnrange.c \
 	ft_string/extra/ft_stntoupper.c \
 	ft_string/extra/ft_stntolower.c \
-	ft_string/extra/ft_stnsetlen.c \
-	ft_string/extra/ft_stnsetcap.c \
 	ft_string/extra/ft_stnexpand.c \
 	ft_string/extra/ft_stncontract.c \
+	ft_string/extra/ft_stnhdr.c \
+	ft_string/extra/ft_stnsetlen.c \
+	ft_string/extra/ft_stnsetcap.c \
 	\
 	ft_stdlib/ft_atoi.c \
 	ft_stdlib/ft_atoll.c \
@@ -138,6 +139,7 @@ SRCS		:=	\
 	ft_arraylist/ft_arrnew.c \
 	ft_arraylist/ft_arrfree.c \
 	ft_arraylist/ft_arrsize.c \
+	ft_arraylist/ft_arrcap.c \
 	ft_arraylist/ft_arrat.c \
 	ft_arraylist/ft_arrappend.c \
 	ft_arraylist/ft_arrinsert.c \
