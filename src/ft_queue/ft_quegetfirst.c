@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_int.h                                     :+:      :+:    :+:   */
+/*   ft_quegetfirst.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:50:55 by yuuko            ###   ########.fr       */
+/*   Created: 2024/06/23 03:17:32 by yuuko             #+#    #+#             */
+/*   Updated: 2024/06/23 03:27:59 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STACK_INT_H
-# define FT_STACK_INT_H
+#include "ft_queue_int.h"
+#include <stdlib.h>
 
-# include "ft_linkedlist.h"
-# include "ft_stack.h"
-# include <stddef.h>
-
-struct		s_stack
+/**
+ * @brief Returns the first element of the queue.
+ *
+ * @param que A pointer to the queue to get the first element from.
+ * @return The first element of the queue, NULL if the queue is empty.
+ */
+void	*ft_quegetfirst(const t_queue *que)
 {
-	t_list	*top;
-	size_t	size;
-};
-
-#endif
+	if (ft_queisempty(que))
+		return (NULL);
+	return (que->front->content);
+}

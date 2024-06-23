@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_int.h                                     :+:      :+:    :+:   */
+/*   ft_quenew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:50:55 by yuuko            ###   ########.fr       */
+/*   Created: 2024/06/23 01:54:55 by yuuko             #+#    #+#             */
+/*   Updated: 2024/06/23 02:35:23 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STACK_INT_H
-# define FT_STACK_INT_H
+#include "ft_queue_int.h"
+#include <stdlib.h>
 
-# include "ft_linkedlist.h"
-# include "ft_stack.h"
-# include <stddef.h>
-
-struct		s_stack
+/**
+ * @brief Allocates (with malloc(3)) and returns a new queue.
+ *
+ * @return The new queue.
+ */
+t_queue	*ft_quenew(void)
 {
-	t_list	*top;
-	size_t	size;
-};
+	t_queue	*que;
 
-#endif
+	que = malloc(sizeof(t_queue));
+	if (!que)
+		return (NULL);
+	que->front = NULL;
+	que->back = NULL;
+	que->size = 0;
+	return (que);
+}

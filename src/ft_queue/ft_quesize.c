@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_int.h                                     :+:      :+:    :+:   */
+/*   ft_quesize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:50:55 by yuuko            ###   ########.fr       */
+/*   Created: 2024/06/23 01:54:55 by yuuko             #+#    #+#             */
+/*   Updated: 2024/06/23 02:37:07 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STACK_INT_H
-# define FT_STACK_INT_H
+#include "ft_queue_int.h"
+#include <stdlib.h>
 
-# include "ft_linkedlist.h"
-# include "ft_stack.h"
-# include <stddef.h>
-
-struct		s_stack
+/**
+ * @brief Returns the number of elements in the queue.
+ *
+ * @param que A pointer to the queue to be checked.
+ * @return The size of the queue.
+ */
+size_t	ft_quesize(const t_queue *que)
 {
-	t_list	*top;
-	size_t	size;
-};
-
-#endif
+	return (que->size);
+}

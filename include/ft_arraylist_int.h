@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:07:28 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/02 14:23:08 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/23 01:48:09 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_ARRAYLIST_INT_H
 
 # include "ft_arraylist.h"
+# include <stddef.h>
 
 # define ARRAY_DEFAULT_CAPACITY 16
 # define ARRAY_GROWTH_FACTOR 2

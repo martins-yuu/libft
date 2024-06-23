@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/06/12 02:40:46 by yuuko            ###   ########.fr        #
+#    Updated: 2024/06/23 04:38:02 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ INCS		:= \
 
 SRC_DIR		:= src
 
-# List all source files according to the norm at 42
+# List all source files according to the 42 norm
 SRCS		:= \
 	ft_ctype/ft_isupper.c \
 	ft_ctype/ft_islower.c \
@@ -140,6 +140,15 @@ SRCS		:= \
 	ft_stack/ft_stkrotate.c \
 	ft_stack/ft_stkrrotate.c \
 	\
+	ft_queue/ft_quenew.c \
+	ft_queue/ft_quefree.c \
+	ft_queue/ft_quesize.c \
+	ft_queue/ft_queisempty.c \
+	ft_queue/ft_quegetfirst.c \
+	ft_queue/ft_quegetlast.c \
+	ft_queue/ft_queenqueue.c \
+	ft_queue/ft_quedequeue.c \
+	\
 	ft_hashmap/ft_hshnew.c \
 	ft_hashmap/ft_hshfree.c \
 	ft_hashmap/ft_hshsize.c \
@@ -153,6 +162,9 @@ SRCS		:= \
 	ft_hashmap/ft_hshhash.c \
 	ft_hashmap/ft_hshfind.c \
 	ft_hashmap/ft_hshexpand.c \
+
+# Or use a wildcard to automatically generate the sources list
+# SRCS		:= $(shell find $(SRC_DIR) -name '*.cpp' -or -name '*.c' -or -name '*.s')
 
 SRCS		:= $(addprefix $(SRC_DIR)/, $(SRCS))
 
@@ -217,21 +229,24 @@ endif
 
 all: $(NAME) ## Build the program
 
+# Create static library
 $(NAME): $(LIBS) $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-	$(call message,CREATED,$(NAME),$(BLUE))
+# Or link the C/C++ objects into a final executable
 # $(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $(NAME)
 # $(CXX) $(LDFLAGS) $(OBJS) $(LDLIBS) -o $(NAME)
+	$(call message,CREATED,$(NAME),$(BLUE))
 
 $(LIBS):
 	$(MAKE) -C $(@D)
 
+# Compile the C/C++ sources into objects
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+# $(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
 	printf $(CLEAR)
 	$(call message,CREATED,$(basename $(notdir $@)),$(GREEN))
-# $(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
 
 clean: ## Remove all generated object files
 	for lib in $(dir $(LIBS)); do $(MAKE) -C $$lib clean; done
@@ -272,5 +287,6 @@ help: ## Show this message
 .PHONY: all clean fclean re help
 .SILENT:
 .IGNORE: clean fclean run update help
+.DELETE_ON_ERROR:
 
 -include $(DEPS)
