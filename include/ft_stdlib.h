@@ -6,14 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 07:32:16 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/22 22:32:56 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/23 01:51:24 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STDLIB_H
 # define FT_STDLIB_H
 
-# include <stdlib.h>
+# include <stddef.h>
 
 int			ft_atoi(const char *nptr);
 long long	ft_atoll(const char *nptr);

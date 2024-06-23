@@ -6,14 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 21:31:32 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/23 01:52:15 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
-# include <stdlib.h>
+# include <stddef.h>
 # include <unistd.h>
 
 typedef char	*t_string;

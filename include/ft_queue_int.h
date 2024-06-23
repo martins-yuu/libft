@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_int.h                                     :+:      :+:    :+:   */
+/*   ft_queue_int.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:50:55 by yuuko            ###   ########.fr       */
+/*   Created: 2024/06/23 01:33:04 by yuuko             #+#    #+#             */
+/*   Updated: 2024/06/23 01:50:45 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STACK_INT_H
-# define FT_STACK_INT_H
+#ifndef FT_QUEUE_INT_H
+# define FT_QUEUE_INT_H
 
 # include "ft_linkedlist.h"
-# include "ft_stack.h"
+# include "ft_queue.h"
 # include <stddef.h>
 
-struct		s_stack
+struct		s_queue
 {
-	t_list	*top;
+	t_list	*front;
+	t_list	*back;
 	size_t	size;
 };
 

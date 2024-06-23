@@ -6,14 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:07:28 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/02 14:21:20 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/23 01:48:18 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ARRAYLIST_H
 # define FT_ARRAYLIST_H
 
-# include <stdlib.h>
+# include <stddef.h>
 
 typedef struct s_array	t_array;
 

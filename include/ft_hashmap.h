@@ -6,16 +6,15 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:42 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/29 00:16:10 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/23 01:50:19 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_HASHMAP_H
 # define FT_HASHMAP_H
 
-# include "ft_arraylist.h"
 # include <stdbool.h>
-# include <stdlib.h>
+# include <stddef.h>
 
 # define HASHMAP_MAX_LOAD_FACTOR 0.75
 # define HASHMAP_GROWTH_FACTOR 2

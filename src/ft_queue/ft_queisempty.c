@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_int.h                                     :+:      :+:    :+:   */
+/*   ft_queisempty.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:50:55 by yuuko            ###   ########.fr       */
+/*   Created: 2024/06/23 01:54:55 by yuuko             #+#    #+#             */
+/*   Updated: 2024/06/23 02:56:13 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STACK_INT_H
-# define FT_STACK_INT_H
+#include "ft_queue_int.h"
+#include <stdbool.h>
 
-# include "ft_linkedlist.h"
-# include "ft_stack.h"
-# include <stddef.h>
-
-struct		s_stack
+/**
+ * @brief Checks if the given queue is empty.
+ *
+ * @param que A pointer to the queue to check.
+ * @return `true` if the queue is empty. `false` otherwise.
+ */
+bool	ft_queisempty(const t_queue *que)
 {
-	t_list	*top;
-	size_t	size;
-};
-
-#endif
+	return (que->size == 0);
+}

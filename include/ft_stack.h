@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:50:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/29 00:08:56 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/23 01:51:00 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_STACK_H
 
 # include <stdbool.h>
-# include <stdlib.h>
+# include <stddef.h>
 
 typedef struct s_stack	t_stack;
 

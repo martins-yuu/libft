@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 09:45:13 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/18 02:33:19 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/23 01:52:36 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "ft_ctype.h"
 # include "ft_hashmap.h"
 # include "ft_linkedlist.h"
+# include "ft_queue.h"
 # include "ft_stack.h"
 # include "ft_stdio.h"
 # include "ft_stdlib.h"
