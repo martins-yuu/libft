@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 04:09:07 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:00:39 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:54:52 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Returns the length of the binary-safe string `s`.

@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 03:17:32 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 03:27:59 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:44:44 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Returns the first element of the queue.

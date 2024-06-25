@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:00:57 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:46:48 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:51:19 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Compares the first (at most) `n` bytes of `s1` and `s2`.

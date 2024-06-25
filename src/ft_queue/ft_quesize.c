@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 01:54:55 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 02:37:07 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:45:44 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Returns the number of elements in the queue.

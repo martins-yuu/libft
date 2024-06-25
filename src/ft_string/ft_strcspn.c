@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:30:54 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:49:10 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:52:22 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Calculate the length of the initial segment of `s` which consists

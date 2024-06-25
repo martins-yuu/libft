@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 21:10:07 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 21:10:08 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:34:18 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Returns the number of elements in the array.

@@ -6,14 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 00:22:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/02 14:23:07 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:39:35 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_int.h"
 #include "ft_hashmap_int.h"
 #include <stdbool.h>
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Sets a key-value pair in the hash map.

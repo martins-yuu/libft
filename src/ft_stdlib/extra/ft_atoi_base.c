@@ -6,13 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 19:01:28 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 01:00:59 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:49:23 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ctype.h"
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Converts the initial portion of the string pointed to by `str` to int

@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 16:39:39 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:01:48 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:54:22 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 static size_t	get_range_len(ssize_t *start, ssize_t *end, size_t len);
 
