@@ -6,14 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 04:16:47 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 20:56:22 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:26:35 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_int.h"
-#include "ft_stdlib.h"
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Adds the element `new` at the end of the array.

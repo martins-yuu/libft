@@ -6,12 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 15:10:54 by yuuko             #+#    #+#             */
-/*   Updated: 2024/04/26 08:39:13 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:52:29 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include <stdlib.h>
 
 /**
  * @brief Returns a pointer to the first occurrence of the character `c` in the

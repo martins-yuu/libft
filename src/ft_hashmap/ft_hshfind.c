@@ -6,14 +6,15 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 13:54:00 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/02 14:23:03 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 05:05:45 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_int.h"
 #include "ft_hashmap_int.h"
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stdbool.h>
+#include <stddef.h>
 
 /**
  * @brief Returns the entry with the given key in the hash map.
@@ -30,7 +31,7 @@ struct s_entry	*ft_hshfind(const t_hashmap *hsh, const char *key)
 
 	deleted = NULL;
 	index = hsh->hash(key) % ft_arrcap(hsh->entries);
-	while (1)
+	while (true)
 	{
 		entry = ft_arrat(hsh->entries, index);
 		if (entry->key == NULL && entry->value == NULL)

@@ -6,12 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:56:25 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:11:02 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:36:11 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashmap_int.h"
-#include <stdlib.h>
 
 /**
  * @brief Iterates over the hash map `hsh` and applies the function `f` to each

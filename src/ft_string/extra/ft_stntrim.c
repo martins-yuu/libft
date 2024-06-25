@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 04:45:58 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:03:30 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:53:50 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Removes the characters specified in `set` from the beginning and the

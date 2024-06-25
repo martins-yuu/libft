@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:47:37 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:56:33 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:53:24 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Allocates (with malloc(3)) and returns a copy of `s1` with the

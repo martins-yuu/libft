@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:18:14 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:18:09 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:38:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashmap_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 #define FNV_OFFSET_BASIS 14695981039346656037UL
 #define FNV_PRIME 1099511628211UL

@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:00:39 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:46:33 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:51:12 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Locates the first occurrence of the null-terminated string `little` in

@@ -6,13 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 02:43:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/29 00:00:10 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:48:15 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stack_int.h"
 #include <stdbool.h>
-#include <stdlib.h>
 
 /**
  * @brief Swaps the first 2 elements at the top of the stack. Does nothing if

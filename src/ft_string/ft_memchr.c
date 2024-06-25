@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 14:58:40 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:51:25 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:52:55 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Scans the initial `n` bytes of the memory area pointed to by `s` for

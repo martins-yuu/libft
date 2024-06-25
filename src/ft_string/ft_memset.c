@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 14:07:29 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:50:04 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:52:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Fills the first `n` bytes of the memory area pointed to by `s` with

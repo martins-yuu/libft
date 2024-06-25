@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:36:00 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:48:37 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:51:58 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Appends the NUL-terminated string `src` to the end of `dst`. It will

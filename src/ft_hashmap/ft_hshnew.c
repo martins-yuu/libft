@@ -6,12 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:29:55 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:18:32 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:39:00 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist.h"
 #include "ft_hashmap_int.h"
+#include <stddef.h>
 #include <stdlib.h>
 
 /**
