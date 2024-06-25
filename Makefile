@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/06/23 04:38:02 by yuuko            ###   ########.fr        #
+#    Updated: 2024/06/25 17:39:50 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,6 +105,7 @@ SRCS		:= \
 	ft_stdio/extra/ft_putendl.c \
 	ft_stdio/extra/ft_putnbr.c \
 	ft_stdio/extra/ft_putnbr_base.c \
+	ft_stdio/extra/get_next_line.c \
 	\
 	ft_linkedlist/ft_lstnew.c \
 	ft_linkedlist/ft_lstadd_front.c \
@@ -220,12 +221,18 @@ endef
 ifdef WITH_DEBUG
 	TITLE	+= $(MAGENTA)debug$(RESET)
 	CFLAGS	+= -g3
+else
+	CFLAGS	+= -O3
 endif
 
 ifdef WITH_SANITIZER
 	TITLE	+= $(MAGENTA)sanitizer$(RESET)
 	CFLAGS	+= -fsanitize=address
 endif
+
+# **************************************************************************** #
+#    Targets                                                                   #
+# **************************************************************************** #
 
 all: $(NAME) ## Build the program
 

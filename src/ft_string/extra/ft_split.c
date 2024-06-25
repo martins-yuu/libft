@@ -6,14 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 20:48:04 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:14:14 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:56:42 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
 #include "ft_string.h"
 #include <stdbool.h>
-#include <stdlib.h>
+#include <stddef.h>
 
 static size_t	count_words(char const *s, char c);
 static char		*next_word(const char **s, char c);

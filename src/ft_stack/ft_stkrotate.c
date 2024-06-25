@@ -6,14 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 02:43:15 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/29 00:03:29 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:46:42 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linkedlist.h"
 #include "ft_stack_int.h"
 #include <stdbool.h>
-#include <stdlib.h>
 
 /**
  * @brief Shifts the stack up by one. The first element becomes the last one.

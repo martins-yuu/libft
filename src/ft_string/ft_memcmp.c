@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 17:49:13 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:51:16 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:52:50 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Compares the first `n` bytes (each interpreted as unsigned char) of

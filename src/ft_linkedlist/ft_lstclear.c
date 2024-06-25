@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 14:33:25 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/22 22:57:42 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:42:35 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linkedlist.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Deletes and frees the given node and every successor of that node,

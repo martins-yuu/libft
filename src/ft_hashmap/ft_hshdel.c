@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:27:01 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:16:46 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:35:36 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashmap_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Deletes a key-value pair from the hash map.

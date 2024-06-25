@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 03:04:33 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:03:01 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:54:10 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Sets the length of the binary-safe string to `newlen`.

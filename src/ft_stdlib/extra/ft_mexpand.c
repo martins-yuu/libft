@@ -6,11 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 00:58:08 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:59:56 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:49:42 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include <stddef.h>
 #include <stdlib.h>
 
 /**

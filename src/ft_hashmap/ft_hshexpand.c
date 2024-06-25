@@ -6,13 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:24:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:17:21 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:36:55 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_int.h"
 #include "ft_hashmap_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 static void	set_entry(t_array *entries, struct s_entry *entry, size_t index);
 

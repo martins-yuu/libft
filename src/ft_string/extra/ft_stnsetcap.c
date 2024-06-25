@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 03:05:54 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:02:37 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:54:14 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Sets the capacity of the binary-safe string to `newcap`.

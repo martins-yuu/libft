@@ -6,13 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 05:10:37 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/02 14:20:41 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:29:28 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_int.h"
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Deletes the element at position `index`.

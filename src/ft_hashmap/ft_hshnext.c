@@ -6,14 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:51:27 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/02 14:23:06 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:39:24 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arraylist_int.h"
 #include "ft_hashmap_int.h"
 #include <stdbool.h>
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Advances the iterator to the next entry in the hash map.

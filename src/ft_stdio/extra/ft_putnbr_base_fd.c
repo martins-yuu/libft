@@ -6,13 +6,13 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 18:36:33 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 01:02:37 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:48:57 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdio.h"
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Outputs the integer `n` to the given file descriptor in the specified

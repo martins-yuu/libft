@@ -6,11 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 14:26:17 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:51:06 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:52:44 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Copies `n` bytes from memory area `src` to memory area `dest`.

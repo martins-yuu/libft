@@ -6,11 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:50:41 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 22:18:03 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:38:21 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashmap_int.h"
+#include <stddef.h>
 
 /**
  * @brief Returns the value associated with the key in the hash map.

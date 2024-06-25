@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 14:21:43 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 00:51:40 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:53:00 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Erases the data in the `n` bytes of the memory starting at the

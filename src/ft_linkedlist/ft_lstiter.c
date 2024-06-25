@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 14:33:32 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/22 22:57:51 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:42:52 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linkedlist.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Iterates the list `lst` and applies the function `f` on the content

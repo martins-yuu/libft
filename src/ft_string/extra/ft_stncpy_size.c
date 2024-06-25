@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 23:40:24 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 21:55:42 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:55:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Copies up to `size` characters from the binary-safe string `src` to

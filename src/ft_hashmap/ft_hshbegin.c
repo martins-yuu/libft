@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:51:29 by yuuko             #+#    #+#             */
-/*   Updated: 2024/05/28 23:10:58 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:35:22 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashmap_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Returns an iterator for the given hash map.

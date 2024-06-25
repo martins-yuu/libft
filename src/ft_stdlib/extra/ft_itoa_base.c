@@ -6,11 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 20:28:55 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/24 01:00:26 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:49:32 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include <stddef.h>
 #include <stdlib.h>
 
 static size_t	count_digits(int n, size_t base_size);

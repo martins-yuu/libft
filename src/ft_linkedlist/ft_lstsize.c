@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 14:33:46 by yuuko             #+#    #+#             */
-/*   Updated: 2024/03/22 22:58:36 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:43:33 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linkedlist.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Counts the number of nodes in a list.

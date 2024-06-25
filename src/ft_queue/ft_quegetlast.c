@@ -6,12 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 03:17:32 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 03:28:04 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/06/25 03:45:15 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_queue_int.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * @brief Returns the last element of the queue.
