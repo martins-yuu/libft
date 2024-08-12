@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/06/25 17:39:50 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/12 00:42:44 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,15 +96,17 @@ SRCS		:= \
 	ft_stdlib/extra/ft_min.c \
 	\
 	ft_stdio/extra/ft_putchar_fd.c \
-	ft_stdio/extra/ft_putstr_fd.c \
-	ft_stdio/extra/ft_putendl_fd.c \
-	ft_stdio/extra/ft_putnbr_fd.c \
-	ft_stdio/extra/ft_putnbr_base_fd.c \
 	ft_stdio/extra/ft_putchar.c \
+	ft_stdio/extra/ft_putstr_fd.c \
 	ft_stdio/extra/ft_putstr.c \
+	ft_stdio/extra/ft_putendl_fd.c \
 	ft_stdio/extra/ft_putendl.c \
+	ft_stdio/extra/ft_putnbr_fd.c \
 	ft_stdio/extra/ft_putnbr.c \
+	ft_stdio/extra/ft_putnbr_base_fd.c \
 	ft_stdio/extra/ft_putnbr_base.c \
+	ft_stdio/extra/ft_putnbr_hex_fd.c \
+	ft_stdio/extra/ft_putnbr_hex.c \
 	ft_stdio/extra/get_next_line.c \
 	\
 	ft_linkedlist/ft_lstnew.c \
