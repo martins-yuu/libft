@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/08/12 00:42:44 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/12 12:57:26 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -229,7 +229,7 @@ endif
 
 ifdef WITH_SANITIZER
 	TITLE	+= $(MAGENTA)sanitizer$(RESET)
-	CFLAGS	+= -fsanitize=address
+	CFLAGS	+= -fsanitize=address,undefined
 endif
 
 # **************************************************************************** #
@@ -237,6 +237,15 @@ endif
 # **************************************************************************** #
 
 all: $(NAME) ## Build the program
+
+debug: ## Build the program with debug symbols
+	$(MAKE) WITH_DEBUG=1 all
+
+sanitizer: ## Build the program with debug symbols and sanitizer
+	$(MAKE) WITH_DEBUG=1 WITH_SANITIZER=1 all
+
+loose: ## Build the program ignoring warnings
+	$(MAKE) CFLAGS="$(filter-out -Werror,$(CFLAGS))" all
 
 # Create static library
 $(NAME): $(LIBS) $(OBJS)
@@ -247,7 +256,7 @@ $(NAME): $(LIBS) $(OBJS)
 	$(call message,CREATED,$(NAME),$(BLUE))
 
 $(LIBS):
-	$(MAKE) -C $(@D)
+	$(MAKE) -C $(@D) -j4
 
 # Compile the C/C++ sources into objects
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
@@ -271,8 +280,24 @@ re: ## Rebuild the program
 	$(MAKE) fclean
 	$(MAKE) all
 
-run: ## Run the program
+re.%: ## Force execution of a target recipe (usage: make re.<target>)
+	$(MAKE) --always-make $*
+
+run: $(NAME) ## Run the program
+	$(call message,RUNNING,./$(NAME),$(CYAN))
 	./$(NAME)
+
+run.%: $(NAME) ## Run the program with arguments (usage: make run.<args>)
+	$(call message,RUNNING,./$(NAME) $*,$(CYAN))
+	./$(NAME) $*
+
+valgrind: $(NAME) ## Run valgrind on the program
+	$(call message,RUNNING,valgrind ./$(NAME),$(CYAN))
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME)
+
+valgrind.%: $(NAME) ## Run valgrind on the program passing arguments (usage: make run.valgrind.<args>)
+	$(call message,RUNNING,valgrind ./$(NAME) $*,$(CYAN))
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME) $*
 
 update: ## Update the repository and its submodules
 	git stash
@@ -293,7 +318,7 @@ help: ## Show this message
 	grep -E '^[a-zA-Z_.%-]+:.*?## .*$$' Makefile \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "%2s$(CYAN)%-20s$(RESET) %s\n", "", $$1, $$2}'
 
-.PHONY: all clean fclean re help
+.PHONY: all debug sanitizer loose clean fclean re run valgrind update help
 .SILENT:
 .IGNORE: clean fclean run update help
 .DELETE_ON_ERROR:
