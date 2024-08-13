@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:52:15 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/13 01:08:55 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 t_string		ft_stnnew(const char *s);
 t_string		ft_stnnew_size(const char *s, size_t size);
+t_string		ft_stnnew_empty(void);
 void			ft_stnfree(t_string s);
 size_t			ft_stnlen(const t_string s);
 size_t			ft_stncap(const t_string s);
