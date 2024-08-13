@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 02:47:46 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/25 03:54:42 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/13 01:01:10 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include <stdlib.h>
 
 /**
- * @brief Allocates (with malloc(3)) and returns a new binary-safe string.
+ * @brief Allocates (with malloc(3)) and returns a new binary-safe string with
+ * the given size.
  *
  * @param s The content to create the string with.
  * @param size The size of the string.
