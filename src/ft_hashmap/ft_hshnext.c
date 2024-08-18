@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:51:27 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/25 03:39:24 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/17 20:46:28 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ bool	ft_hshnext(t_hashmap_iterator *it)
 	struct s_entry	*entry;
 
 	hsh = it->_hsh;
+	if (!hsh)
+		return (false);
 	while (it->_index < ft_arrcap(hsh->entries))
 	{
 		i = it->_index;
