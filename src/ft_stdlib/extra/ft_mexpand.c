@@ -6,10 +6,11 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 00:58:08 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/25 03:49:42 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/18 15:41:53 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_stdlib.h"
 #include "ft_string.h"
 #include <stddef.h>
 #include <stdlib.h>
@@ -38,7 +39,7 @@ void	*ft_mexpand(void *ptr, size_t size, size_t oldsize)
 		free(ptr);
 		return (NULL);
 	}
-	new = malloc(size);
+	new = ft_calloc(size, sizeof(char));
 	if (!new)
 		return (NULL);
 	ft_memcpy(new, ptr, oldsize);
