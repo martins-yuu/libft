@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 02:47:46 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/25 03:54:31 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/17 21:29:22 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@
  */
 t_string	ft_stnnew(const char *s)
 {
+	if (!s)
+		return (ft_stnnew_empty());
 	return (ft_stnnew_size(s, ft_strlen(s)));
 }

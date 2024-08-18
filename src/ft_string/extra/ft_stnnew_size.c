@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 02:47:46 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/13 01:01:10 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/17 21:22:19 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ t_string	ft_stnnew_size(const char *s, size_t size)
 	ptr->size = size;
 	ptr->capacity = size;
 	stn = ptr->buffer;
-	ft_memcpy(stn, s, size);
+	if (s)
+		ft_memcpy(stn, s, size);
+	else
+		ft_bzero(stn, size);
 	stn[size] = '\0';
 	return (stn);
 }
