@@ -6,11 +6,12 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 00:27:21 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/18 01:33:27 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/18 16:53:15 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include <stddef.h>
 
 /**
  * @brief Pads the string with the specified character on the left side.

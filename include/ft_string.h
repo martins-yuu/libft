@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/18 00:41:26 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/18 17:20:33 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,13 @@ t_string		ft_stncat(t_string dst, const char *src);
 t_string		ft_stncat_size(t_string dst, const char *src, size_t size);
 int				ft_stncmp(const t_string s1, const t_string s2);
 t_string		ft_stntrim(t_string s1, const char *set);
-t_string		ft_stnrange(t_string s, ssize_t start, ssize_t end);
+t_string		ft_stnlstrip(t_string s, int (*f)(int));
+t_string		ft_stnrstrip(t_string s, int (*f)(int));
+t_string		ft_stnstrip(t_string s, int (*f)(int));
+t_string		ft_stnstrip_space(t_string s);
 t_string		ft_stnlpad(t_string s, size_t size, char c);
 t_string		ft_stnrpad(t_string s, size_t size, char c);
+t_string		ft_stnrange(t_string s, ssize_t start, ssize_t end);
 t_string		ft_stntoupper(t_string s);
 t_string		ft_stntolower(t_string s);
 t_string		ft_stnexpand(t_string s, size_t size);

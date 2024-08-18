@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stnrpad.c                                       :+:      :+:    :+:   */
+/*   ft_stnrstrip.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 00:27:21 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/18 16:52:49 by yuuko            ###   ########.fr       */
+/*   Created: 2024/08/18 16:51:35 by yuuko             #+#    #+#             */
+/*   Updated: 2024/08/18 17:10:38 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_string.h"
+#include "ft_string_int.h"
 #include <stddef.h>
 
 /**
- * @brief Pads the string with the specified character on the right side.
+ * @brief Strips the string from the left side of the characters that satisfy
+ * the function `f`.
  *
- * @param s The string to pad.
- * @param size The total size of the string after padding.
- * @param c The character to pad the string with.
- * @return The padded string. NULL if the allocation fails.
+ * @param s The string to strip.
+ * @param f The function to check the characters.
+ * @return The stripped string.
  */
-t_string	ft_stnrpad(t_string s, size_t size, char c)
+t_string	ft_stnrstrip(t_string s, int (*f)(int))
 {
 	size_t	len;
 
 	len = ft_stnlen(s);
-	if (len >= size)
-		return (s);
-	s = ft_stnexpand(s, size);
-	if (!s)
-		return (NULL);
-	ft_memset(s + len, c, size - len);
+	while (len > 0 && f(s[len - 1]))
+		len--;
+	s[len] = '\0';
+	ft_stnsetlen(s, len);
 	return (s);
 }
