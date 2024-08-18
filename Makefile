@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/08/17 04:14:32 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/18 00:35:09 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,8 @@ SRCS		:= \
 	ft_string/extra/ft_stncmp.c \
 	ft_string/extra/ft_stntrim.c \
 	ft_string/extra/ft_stnrange.c \
+	ft_string/extra/ft_stnlpad.c \
+	ft_string/extra/ft_stnrpad.c \
 	ft_string/extra/ft_stntoupper.c \
 	ft_string/extra/ft_stntolower.c \
 	ft_string/extra/ft_stnexpand.c \
