@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/08/19 00:14:06 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/22 01:16:55 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ SRCS		:= \
 	ft_string/extra/ft_stnstrip_space.c \
 	ft_string/extra/ft_stnrange.c \
 	ft_string/extra/ft_stnclear.c \
+	ft_string/extra/ft_stnmap.c \
 	ft_string/extra/ft_stntoupper.c \
 	ft_string/extra/ft_stntolower.c \
 	ft_string/extra/ft_stnexpand.c \
@@ -224,6 +225,7 @@ ERROR		:= $(shell tput setab 1)$(WHITE)
 SUCCESS		:= $(shell tput setab 2)$(WHITE)
 WARNING		:= $(shell tput setab 3)$(WHITE)
 INFO		:= $(shell tput setab 4)$(WHITE)
+BOLD		:= $(shell tput bold)
 RESET		:= $(shell tput sgr0)
 CLEAR		:= $(shell tput cuu1; tput el)
 TITLE		:= $(YELLOW)$(basename $(NAME))$(RESET)
@@ -325,9 +327,9 @@ print.%: ## Print the value of a variable (usage: make print.<variable>)
 	$(info '$*'='$($*)')
 
 help: ## Show this message
-	echo "Usage: make [<name>=<value>...] [target...]"
+	echo "$(BOLD)Usage: make [<name>=<value>...]$(RESET) $(BOLD)$(CYAN)[target...]$(RESET)"
 	echo
-	echo "Targets:"
+	echo "$(BOLD)Targets:$(RESET)"
 	grep -E '^[a-zA-Z_.%-]+:.*?## .*$$' Makefile \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "%2s$(CYAN)%-20s$(RESET) %s\n", "", $$1, $$2}'
 

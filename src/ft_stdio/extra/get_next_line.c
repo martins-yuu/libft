@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 17:02:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/14 00:06:29 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/21 17:52:12 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 128
 #endif
-
-static bool	build_line(int fd, char buffer[], size_t *position, t_string *line);
 
 /**
  * @brief Returns a line from the file descriptor `fd`.
@@ -38,44 +36,36 @@ char	*get_next_line(int fd)
 {
 	static char		buffer[BUFFER_SIZE + 1] = {0};
 	static size_t	position = 0;
+	ssize_t			bytes_read;
+	size_t			len;
 	t_string		line;
 
 	if (BUFFER_SIZE <= 0 || fd == -1 || read(fd, buffer, 0) == -1)
 		return (NULL);
 	line = ft_stnnew_empty();
-	if (!build_line(fd, buffer, &position, &line))
-	{
-		ft_stnfree(line);
-		return (NULL);
-	}
-	return (line);
-}
-
-static bool	build_line(int fd, char buffer[], size_t *position, t_string *line)
-{
-	ssize_t	bytes_read;
-	size_t	len;
-
 	while (true)
 	{
-		if (*position == 0)
+		if (position == 0)
 		{
 			bytes_read = read(fd, buffer, BUFFER_SIZE);
 			if (bytes_read <= 0)
-				return (false);
+				return (ft_stnfree(line), NULL);
 			buffer[bytes_read] = '\0';
 		}
-		len = ft_strcspn(buffer + *position, "\n");
-		*line = ft_stncat_size(*line, buffer + *position, len);
-		if (!*line)
-			return (false);
-		*position += len;
-		if (buffer[*position] == '\n')
+		len = ft_strcspn(buffer + position, "\n");
+		line = ft_stncat_size(line, buffer + position, len);
+		if (!line)
+			return (ft_stnfree(line), NULL);
+		position += len;
+		if (buffer[position] == '\n')
 		{
-			(*position)++;
+			line = ft_stncat_size(line, "\n", sizeof(char));
+			if (!line)
+				return (ft_stnfree(line), NULL);
+			position++;
 			break ;
 		}
-		*position = 0;
+		position = 0;
 	}
-	return (true);
+	return (line);
 }
