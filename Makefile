@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/08/18 19:10:50 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/19 00:14:06 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,8 @@ SRCS		:= \
 	ft_string/extra/ft_stncpy_size.c \
 	ft_string/extra/ft_stncat.c \
 	ft_string/extra/ft_stncat_size.c \
+	ft_string/extra/ft_stnprepend.c \
+	ft_string/extra/ft_stnprepend_size.c \
 	ft_string/extra/ft_stncmp.c \
 	ft_string/extra/ft_stntrim.c \
 	ft_string/extra/ft_stnlpad.c \
