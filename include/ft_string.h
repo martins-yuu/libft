@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/19 00:13:11 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/19 20:13:17 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ t_string		ft_stnlpad(t_string s, size_t size, char c);
 t_string		ft_stnrpad(t_string s, size_t size, char c);
 t_string		ft_stnrange(t_string s, ssize_t start, ssize_t end);
 t_string		ft_stnclear(t_string s);
+t_string		ft_stnmap(t_string s, const char *from, const char *to);
 t_string		ft_stntoupper(t_string s);
 t_string		ft_stntolower(t_string s);
 t_string		ft_stnexpand(t_string s, size_t size);
