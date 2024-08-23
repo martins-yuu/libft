@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 17:02:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/21 17:52:12 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/25 17:59:36 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char	*get_next_line(int fd)
 	if (BUFFER_SIZE <= 0 || fd == -1 || read(fd, buffer, 0) == -1)
 		return (NULL);
 	line = ft_stnnew_empty();
+	if (!line)
+		return (NULL);
 	while (true)
 	{
 		if (position == 0)

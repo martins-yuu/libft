@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:42 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:50:19 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/22 23:25:21 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef size_t				(*t_hash_func)(const char *key);
 t_hashmap					*ft_hshnew(t_hash_func hash);
 void						ft_hshfree(t_hashmap *hsh);
 size_t						ft_hshsize(const t_hashmap *hsh);
+bool						ft_hshisempty(const t_hashmap *hsh);
 void						*ft_hshget(const t_hashmap *hsh, const char *key);
 bool						ft_hshset(t_hashmap *hsh, const char *key,
 								void *value);

@@ -6,13 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:07:28 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:48:18 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/22 23:32:28 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ARRAYLIST_H
 # define FT_ARRAYLIST_H
 
+# include <stdbool.h>
 # include <stddef.h>
 
 typedef struct s_array	t_array;
@@ -20,6 +21,7 @@ typedef struct s_array	t_array;
 t_array					*ft_arrnew(size_t size);
 void					ft_arrfree(t_array *arr);
 size_t					ft_arrsize(const t_array *arr);
+bool					ft_arrisempty(const t_array *arr);
 void					*ft_arrat(const t_array *arr, size_t index);
 void					*ft_arrappend(t_array *arr, const void *new);
 void					*ft_arrinsert(t_array *arr, const void *new,

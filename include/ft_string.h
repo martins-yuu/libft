@@ -6,13 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/19 20:13:17 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/23 20:37:18 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
+# include <stdbool.h>
 # include <stddef.h>
 # include <unistd.h>
 
@@ -37,7 +38,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
-t_string		ft_join(char **arr, char *s);
+t_string		ft_join(const char **arr, char *s);
 void			ft_freesplit(char **s);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -47,6 +48,7 @@ t_string		ft_stnnew_empty(void);
 void			ft_stnfree(t_string s);
 size_t			ft_stnlen(const t_string s);
 size_t			ft_stncap(const t_string s);
+bool			ft_stnisempty(const t_string s);
 t_string		ft_stndup(const t_string s);
 t_string		ft_stncpy(t_string dst, const char *src);
 t_string		ft_stncpy_size(t_string dst, const char *src, size_t size);

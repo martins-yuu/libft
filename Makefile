@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/08/22 01:16:55 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/22 23:38:00 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ SRCS		:= \
 	ft_string/extra/ft_stnfree.c \
 	ft_string/extra/ft_stnlen.c \
 	ft_string/extra/ft_stncap.c \
+	ft_string/extra/ft_stnisempty.c \
 	ft_string/extra/ft_stndup.c \
 	ft_string/extra/ft_stncpy.c \
 	ft_string/extra/ft_stncpy_size.c \
@@ -138,6 +139,7 @@ SRCS		:= \
 	ft_arraylist/ft_arrnew.c \
 	ft_arraylist/ft_arrfree.c \
 	ft_arraylist/ft_arrsize.c \
+	ft_arraylist/ft_arrisempty.c \
 	ft_arraylist/ft_arrcap.c \
 	ft_arraylist/ft_arrat.c \
 	ft_arraylist/ft_arrappend.c \
@@ -169,6 +171,7 @@ SRCS		:= \
 	ft_hashmap/ft_hshnew.c \
 	ft_hashmap/ft_hshfree.c \
 	ft_hashmap/ft_hshsize.c \
+	ft_hashmap/ft_hshisempty.c \
 	ft_hashmap/ft_hshget.c \
 	ft_hashmap/ft_hshset.c \
 	ft_hashmap/ft_hshdel.c \
