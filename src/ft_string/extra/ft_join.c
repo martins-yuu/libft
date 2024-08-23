@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 03:53:32 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/17 04:09:20 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/23 20:37:10 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @param s The separator to use.
  * @return The joined string.
  */
-t_string	ft_join(char **arr, char *s)
+t_string	ft_join(const char **arr, char *s)
 {
 	t_string	res;
 	size_t		i;
