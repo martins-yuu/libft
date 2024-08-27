@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_join.c                                          :+:      :+:    :+:   */
+/*   ft_stnjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/17 03:53:32 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/27 01:11:34 by yuuko            ###   ########.fr       */
+/*   Created: 2024/08/27 00:47:45 by yuuko             #+#    #+#             */
+/*   Updated: 2024/08/27 01:11:57 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_arraylist.h"
 #include "ft_string.h"
-#include <stddef.h>
 
 /**
- * @brief Joins an array of strings with a separator.
+ * @brief Joins an array of strings into a single string.
  *
- * @param arr The array of strings to join.
- * @param s The separator to use.
- * @return The joined string.
+ * @param arr The array to join.
+ * @param s The separator to use between each string.
+ * @return The joined string. NULL if the allocation fails.
  */
-t_string	ft_join(const char **arr, const char *s)
+t_string	ft_stnjoin(const t_array *arr, const char *s)
 {
 	t_string	res;
 	size_t		i;
@@ -29,12 +29,12 @@ t_string	ft_join(const char **arr, const char *s)
 	if (!res)
 		return (NULL);
 	i = 0;
-	while (arr[i] != NULL)
+	while (i < ft_arrsize(arr))
 	{
-		res = ft_stncat(res, arr[i]);
+		res = ft_stncat(res, *(t_string *)ft_arrat(arr, i));
 		if (!res)
 			return (NULL);
-		if (s != NULL && arr[i + 1] != NULL)
+		if (s != NULL && i + 1 < ft_arrsize(arr))
 		{
 			res = ft_stncat(res, s);
 			if (!res)

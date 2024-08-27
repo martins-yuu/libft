@@ -6,13 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/23 20:37:18 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/27 01:11:21 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
+# include "ft_arraylist.h"
 # include <stdbool.h>
 # include <stddef.h>
 # include <unistd.h>
@@ -38,7 +39,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
-t_string		ft_join(const char **arr, char *s);
+t_string		ft_join(const char **arr, const char *s);
 void			ft_freesplit(char **s);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -71,6 +72,9 @@ t_string		ft_stnclear(t_string s);
 t_string		ft_stnmap(t_string s, const char *from, const char *to);
 t_string		ft_stntoupper(t_string s);
 t_string		ft_stntolower(t_string s);
+t_array			*ft_stnsplit(const char *s, char c);
+void			ft_stnfreesplit(t_array *arr);
+t_string		ft_stnjoin(const t_array *arr, const char *s);
 t_string		ft_stnexpand(t_string s, size_t size);
 t_string		ft_stncontract(t_string s);
 
