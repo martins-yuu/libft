@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 16:51:35 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/18 19:10:10 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/28 23:32:40 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@
  */
 t_string	ft_stnlstrip_space(t_string s)
 {
-	return (ft_stnlstrip(s, ft_isspace));
+	return (ft_stnlstrip_if(s, ft_isspace));
 }
