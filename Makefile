@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/08/29 01:16:03 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/29 15:00:12 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ SRCS		:= \
 	ft_string/extra/ft_freesplit.c \
 	ft_string/extra/ft_strmapi.c \
 	ft_string/extra/ft_striteri.c \
+	ft_string/extra/ft_strall.c \
 	ft_string/extra/ft_stnnew.c \
 	ft_string/extra/ft_stnnew_size.c \
 	ft_string/extra/ft_stnnew_empty.c \
