@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 00:21:01 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/28 22:33:41 by yuuko            ###   ########.fr       */
+/*   Created: 2024/08/29 02:55:27 by yuuko             #+#    #+#             */
+/*   Updated: 2024/08/29 02:55:28 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_array	*ft_stnsplit_space(const char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		while (ft_isspace(s[i]))
+		while (s[i] != '\0' && ft_isspace(s[i]))
 			i++;
 		j = i;
 		while (s[j] != '\0' && !ft_isspace(s[j]))
@@ -44,7 +44,7 @@ t_array	*ft_stnsplit_space(const char *s)
 			return (ft_stnfreesplit(arr), NULL);
 		if (!ft_arrappend(arr, &str))
 			return (ft_stnfree(str), ft_stnfreesplit(arr), NULL);
-		i++;
+		i = j;
 	}
 	return (arr);
 }
