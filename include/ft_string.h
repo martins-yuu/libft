@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/29 14:59:48 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/29 16:59:56 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ t_string		ft_stnclear(t_string s);
 t_string		ft_stnmap(t_string s, const char *from, const char *to);
 t_string		ft_stntoupper(t_string s);
 t_string		ft_stntolower(t_string s);
+bool			ft_stntonumeric(t_string s);
 t_array			*ft_stnsplit(const char *s, char c);
 t_array			*ft_stnsplit_space(const char *s);
 void			ft_stnfreesplit(t_array *arr);
