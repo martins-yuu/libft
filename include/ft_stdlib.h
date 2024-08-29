@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 07:32:16 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/29 00:20:44 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/29 01:12:43 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int			ft_max(int a, int b);
 int			ft_min(int a, int b);
 int			ft_abs(int j);
 long long	ft_llabs(long long j);
+void		ft_swap(void *a, void *b, size_t size);
 size_t		ft_setrange(ssize_t *start, ssize_t *end, size_t len);
 
 #endif
