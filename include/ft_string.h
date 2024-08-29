@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/28 23:26:48 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/29 00:46:01 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "ft_arraylist.h"
 # include <stdbool.h>
 # include <stddef.h>
-# include <unistd.h>
+# include <sys/types.h>
 
 typedef char	*t_string;
 
@@ -79,6 +79,8 @@ t_array			*ft_stnsplit(const char *s, char c);
 t_array			*ft_stnsplit_space(const char *s);
 void			ft_stnfreesplit(t_array *arr);
 t_string		ft_stnjoin(const t_array *arr, const char *s);
+t_string		ft_stnjoin_range(const t_array *arr, const char *s,
+					ssize_t from, ssize_t to);
 t_string		ft_stnexpand(t_string s, size_t size);
 t_string		ft_stncontract(t_string s);
 

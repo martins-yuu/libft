@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 07:32:16 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/23 01:51:24 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/29 00:20:44 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_STDLIB_H
 
 # include <stddef.h>
+# include <sys/types.h>
 
 int			ft_atoi(const char *nptr);
 long long	ft_atoll(const char *nptr);
@@ -26,5 +27,6 @@ int			ft_max(int a, int b);
 int			ft_min(int a, int b);
 int			ft_abs(int j);
 long long	ft_llabs(long long j);
+size_t		ft_setrange(ssize_t *start, ssize_t *end, size_t len);
 
 #endif

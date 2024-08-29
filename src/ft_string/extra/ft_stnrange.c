@@ -6,14 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 16:39:39 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/25 03:54:22 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/29 00:20:52 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_stdlib.h"
 #include "ft_string_int.h"
 #include <stddef.h>
-
-static size_t	get_range_len(ssize_t *start, ssize_t *end, size_t len);
+#include <sys/types.h>
 
 /**
  * @brief Turns the string into a substring from the index `start` to the index
@@ -32,7 +32,7 @@ t_string	ft_stnrange(t_string s, ssize_t start, ssize_t end)
 	len = ft_stnlen(s);
 	if (len == 0)
 		return (s);
-	newlen = get_range_len(&start, &end, len);
+	newlen = ft_setrange(&start, &end, len);
 	if (newlen != 0)
 	{
 		if (start >= (ssize_t)len)
@@ -48,23 +48,4 @@ t_string	ft_stnrange(t_string s, ssize_t start, ssize_t end)
 	s[newlen] = '\0';
 	ft_stnsetlen(s, newlen);
 	return (s);
-}
-
-static size_t	get_range_len(ssize_t *start, ssize_t *end, size_t len)
-{
-	if (*start < 0)
-	{
-		*start = len + *start;
-		if (*start < 0)
-			*start = 0;
-	}
-	if (*end < 0)
-	{
-		*end = len + *end;
-		if (*end < 0)
-			*end = 0;
-	}
-	if (*start > *end)
-		return (0);
-	return (*end - *start + 1);
 }

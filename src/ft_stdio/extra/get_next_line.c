@@ -6,13 +6,14 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 17:02:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/25 17:59:36 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/29 00:09:41 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 #include <stdbool.h>
 #include <stddef.h>
+#include <sys/types.h>
 #include <unistd.h>
 
 #ifndef BUFFER_SIZE
