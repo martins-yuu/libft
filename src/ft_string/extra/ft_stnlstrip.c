@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 16:51:35 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/18 17:41:18 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/28 23:20:19 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 #include <stddef.h>
 
 /**
- * @brief Strips the string from the left side of the characters that satisfy
- * the function `f`.
+ * @brief Strips the binary-safe string `s` from the left side of the character
+ * `c`.
  *
- * @param s The string to strip.
- * @param f The function to check the characters.
+ * @param s The string to be stripped.
+ * @param c The character to strip.
  * @return The stripped string.
  */
-t_string	ft_stnlstrip(t_string s, int (*f)(int))
+t_string	ft_stnlstrip(t_string s, char c)
 {
 	size_t	i;
 	size_t	len;
 
 	i = 0;
 	len = ft_stnlen(s);
-	while (i < len && f(s[i]))
+	while (i < len && s[i] == c)
 		i++;
 	if (i != 0 && i != len)
 		ft_memmove(s, s + i, len - i);
