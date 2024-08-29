@@ -6,7 +6,7 @@
 #    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/08/28 23:30:30 by yuuko            ###   ########.fr        #
+#    Updated: 2024/08/29 00:49:29 by yuuko            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,6 +99,7 @@ SRCS		:= \
 	ft_string/extra/ft_stnsplit_space.c \
 	ft_string/extra/ft_stnfreesplit.c \
 	ft_string/extra/ft_stnjoin.c \
+	ft_string/extra/ft_stnjoin_range.c \
 	ft_string/extra/ft_stnexpand.c \
 	ft_string/extra/ft_stncontract.c \
 	ft_string/extra/ft_stnhdr.c \
@@ -116,6 +117,7 @@ SRCS		:= \
 	ft_stdlib/extra/ft_mexpand.c \
 	ft_stdlib/extra/ft_max.c \
 	ft_stdlib/extra/ft_min.c \
+	ft_stdlib/extra/ft_setrange.c \
 	\
 	ft_stdio/extra/ft_putchar_fd.c \
 	ft_stdio/extra/ft_putchar.c \
