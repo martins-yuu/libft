@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 18:20:48 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/29 16:59:56 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/08/31 20:42:37 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,12 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
-bool			ft_strall(const char *s, int (*f)(int));
 t_string		ft_join(const char **arr, const char *s);
 void			ft_freesplit(char **s);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+size_t			ft_strcount(const char *s, char c);
+bool			ft_strall(const char *s, int (*f)(int));
 t_string		ft_stnnew(const char *s);
 t_string		ft_stnnew_size(const char *s, size_t size);
 t_string		ft_stnnew_empty(void);
