@@ -6,7 +6,7 @@
 /*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 17:02:10 by yuuko             #+#    #+#             */
-/*   Updated: 2024/08/29 00:09:41 by yuuko            ###   ########.fr       */
+/*   Updated: 2024/09/05 02:59:37 by yuuko            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*get_next_line(int fd)
 {
 	static char		buffer[BUFFER_SIZE + 1] = {0};
 	static size_t	position = 0;
-	ssize_t			bytes_read;
+	static ssize_t	bytes_read = 0;
 	size_t			len;
 	t_string		line;
 
@@ -68,6 +68,8 @@ char	*get_next_line(int fd)
 			position++;
 			break ;
 		}
+		else if (!ft_stnisempty(line) && bytes_read < BUFFER_SIZE)
+			break ;
 		position = 0;
 	}
 	return (line);
