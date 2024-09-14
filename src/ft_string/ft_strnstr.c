@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+        */
+/*   By: martins <martins@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 17:00:39 by yuuko             #+#    #+#             */
-/*   Updated: 2024/06/25 03:51:12 by yuuko            ###   ########.fr       */
+/*   Created: 2024/01/02 17:00:39 by martins           #+#    #+#             */
+/*   Updated: 2024/09/14 20:02:40 by martins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
  * @param big The string to be scanned.
  * @param little The string to be searched for.
  * @param len The maximum number of characters to be searched.
- * @return If `little` is an empty string, `big` is returned; if `little` occurs
+ * @return (If `little` is an empty string,
+	`big` is returned); if `little` occurs
  * nowhere in `big`, NULL is returned; otherwise a pointer to the first
  * character of the first occurrence of `little` is returned.
  */

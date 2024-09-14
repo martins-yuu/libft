@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yuuko <yuuko@student.42.fr>                +#+  +:+       +#+         #
+#    By: martins <martins@student.42sp.org.br>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/03 18:20:34 by yuuko             #+#    #+#              #
-#    Updated: 2024/09/05 02:43:39 by yuuko            ###   ########.fr        #
+#    Created: 2024/05/03 18:20:34 by martins           #+#    #+#              #
+#    Updated: 2024/09/15 20:15:51 by martins          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -210,11 +210,13 @@ BUILD_DIR	:= build
 OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 DEPS		:= $(OBJS:.o=.d)
 
+
+
 CC			:= cc
-CFLAGS		:= -Wall -Wextra -Werror
+CFLAGS		:= -std=c99 -Wall -Wextra -Werror -pedantic
 
 CXX			:= c++
-CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS	:= -std=c++98 -Wall -Wextra -Werror -pedantic
 
 CPPFLAGS	:= $(addprefix -I,$(INCS)) -MMD -MP
 LDFLAGS		:= $(addprefix -L,$(dir $(LIBS)))
