@@ -6,7 +6,7 @@
 #    By: martins <martins@student.42sp.org.br>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by martins           #+#    #+#              #
-#    Updated: 2024/09/15 20:15:51 by martins          ###   ########.fr        #
+#    Updated: 2024/10/02 21:38:30 by martins          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -209,8 +209,6 @@ BUILD_DIR	:= build
 
 OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 DEPS		:= $(OBJS:.o=.d)
-
-
 
 CC			:= cc
 CFLAGS		:= -std=c99 -Wall -Wextra -Werror -pedantic
