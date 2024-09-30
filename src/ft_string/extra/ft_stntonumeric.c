@@ -6,7 +6,7 @@
 /*   By: martins <martins@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 16:12:45 by martins           #+#    #+#             */
-/*   Updated: 2024/09/14 20:02:41 by martins          ###   ########.fr       */
+/*   Updated: 2024/09/29 21:28:38 by martins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ bool	ft_stntonumeric(t_string s)
 		return (false);
 	ft_stnlstrip(s, '0');
 	if (ft_stnisempty(s))
+	{
 		ft_stncpy_size(s, "0", sizeof(char));
+		return (true);
+	}
 	if (!ft_strall(s, ft_isdigit))
 		return (false);
 	if (sign != '\0')
