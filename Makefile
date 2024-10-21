@@ -6,7 +6,7 @@
 #    By: martins <martins@student.42sp.org.br>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 18:20:34 by martins           #+#    #+#              #
-#    Updated: 2024/10/02 21:38:30 by martins          ###   ########.fr        #
+#    Updated: 2024/10/21 10:57:40 by martins          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -176,8 +176,8 @@ SRCS		:= \
 	ft_queue/ft_quefree.c \
 	ft_queue/ft_quesize.c \
 	ft_queue/ft_queisempty.c \
-	ft_queue/ft_quegetfirst.c \
-	ft_queue/ft_quegetlast.c \
+	ft_queue/ft_quefirst.c \
+	ft_queue/ft_quelast.c \
 	ft_queue/ft_queenqueue.c \
 	ft_queue/ft_quedequeue.c \
 	\
@@ -290,7 +290,7 @@ $(LIBS):
 	$(MAKE) -C $(@D) -j4
 
 # Compile the C/C++ sources into objects
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c # $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 # $(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
